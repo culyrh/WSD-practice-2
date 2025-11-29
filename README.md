@@ -74,7 +74,7 @@ src/main/java/com/example/wsdpractice/
 ### 5xx (서버 오류)
 - **500 Internal Server Error**: 서버 내부 오류
 
-- <br>
+<br>
 
 ## 미들웨어
 
