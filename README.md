@@ -1,9 +1,12 @@
 # WSD Practice 2 - Java & Spring(Boot)
 
+<br>
+
 ## 프로젝트 개요
-사용자 인증 및 회원 관리 기능을 연습하기 위한 REST API 프로젝트입니다.<br>
+사용자 인증 및 회원 관리 기능을 연습하기 위한 REST API 실습입니다.<br>
 회원가입, 로그인, 회원조회, 회원수정, 회원삭제 등 기본적인 CRUD 기능과
 공통 응답 포맷, 인터셉터 기반 요청 로깅(미들웨어), 예외 처리가 구현되어 있습니다.
+<br>
 
 ## 기술 스택
 | 항목 | 기술 |
@@ -12,6 +15,7 @@
 | Framework | Spring Boot 3.4.12 |
 | Build Tool | Gradle |
 | Architecture | MVC 패턴 (Controller + DTO) |
+<br>
 
 ## 프로젝트 구조
 ```
@@ -28,6 +32,7 @@ src/main/java/com/example/wsdpractice/
 │
 └── postman_tests/                   # POSTMAN 테스트 스크린샷 
 ```
+<br>
 
 ## API 목록
 
@@ -54,6 +59,7 @@ src/main/java/com/example/wsdpractice/
 |--------|----------|-------------|-------------|
 | DELETE | `/api/v1/users/{id}` | 특정 사용자 삭제 | 200 OK / 404 Not Found |
 | DELETE | `/api/v1/users` | 전체 사용자 삭제 | 200 OK / 500 Internal Server Error |
+<br>
 
 ## HTTP 응답 코드 사용
 
@@ -68,6 +74,7 @@ src/main/java/com/example/wsdpractice/
 
 ### 5xx (서버 오류)
 - **500 Internal Server Error**: 서버 내부 오류
+<br>
 
 ## 미들웨어
 
@@ -85,6 +92,7 @@ URI: /api/v1/users/login
 상태 코드: 200
 ------------------------------
 ```
+<br>
 
 ## 응답 형식
 
@@ -107,6 +115,7 @@ URI: /api/v1/users/login
   "message": "에러 메시지"
 }
 ```
+<br>
 
 ## 실행 방법
 
