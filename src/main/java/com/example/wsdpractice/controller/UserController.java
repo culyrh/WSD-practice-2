@@ -94,20 +94,26 @@ public class UserController {
     // GET 1: 전체 회원 조회
     @GetMapping
     public ResponseEntity<ApiResponse<List<UserDto>>> getAllUsers() {
-        List<UserDto> users = new ArrayList<>();
+        try {
+            List<UserDto> users = new ArrayList<>();
 
-        // 비밀번호 제거하고 반환
-        for (UserDto user : store.values()) {
-            UserDto response = new UserDto();
-            response.setId(user.getId());
-            response.setUserId(user.getUserId());
-            response.setName(user.getName());
-            response.setEmail(user.getEmail());
-            users.add(response);
+            // 비밀번호 제거하고 반환
+            for (UserDto user : store.values()) {
+                UserDto response = new UserDto();
+                response.setId(user.getId());
+                response.setUserId(user.getUserId());
+                response.setName(user.getName());
+                response.setEmail(user.getEmail());
+                users.add(response);
+            }
+
+            return ResponseEntity
+                    .ok(ApiResponse.success(users));
+        } catch (Exception e) {
+            return ResponseEntity
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(ApiResponse.error("사용자 조회 중 오류가 발생했습니다: " + e.getMessage()));
         }
-
-        return ResponseEntity
-                .ok(ApiResponse.success(users));
     }
 
     // GET 2: 특정 회원 조회 - id로
