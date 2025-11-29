@@ -1,11 +1,9 @@
-# WSD Practice 2 - Java & Spring(Boot)
+# 🧩 WSD Practice 2 — Java & Spring(Boot)
 
-<br>
-
-## 프로젝트 개요
 사용자 인증 및 회원 관리 기능을 연습하기 위한 REST API 실습입니다.<br>
 회원가입, 로그인, 회원조회, 회원수정, 회원삭제 등 기본적인 CRUD 기능과
 공통 응답 포맷, 인터셉터 기반 요청 로깅(미들웨어), 예외 처리가 구현되어 있습니다.
+
 <br>
 
 ## 기술 스택
@@ -15,6 +13,7 @@
 | Framework | Spring Boot 3.4.12 |
 | Build Tool | Gradle |
 | Architecture | MVC 패턴 (Controller + DTO) |
+
 <br>
 
 ## 프로젝트 구조
